@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <title>Flask and Taran</title>
+  <style>
+    #centers {
+      text-align: center;
+    }
+
+    #banner {
+      width: 100%;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="centers">{{company_name}} n CO.</h1>
+  <img id="banner" src="static/job" height=320 >
+  <h2 id="centers">ABOUT AnC</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+  <h2 id="centers">Open Positions</h2>
+  <div>
+    {% for job in jobs %}
+      {% include 'jobbar.html' %}
+    {% endfor %}
+  </div>
+  <button>contact us</button>
+  
+</body>
